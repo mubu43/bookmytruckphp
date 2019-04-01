@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 26, 2019 at 01:41 PM
+-- Generation Time: Apr 01, 2019 at 08:35 AM
 -- Server version: 10.1.30-MariaDB
 -- PHP Version: 7.1.14
 
@@ -42,13 +42,14 @@ CREATE TABLE `t4b` (
 --
 
 INSERT INTO `t4b` (`ID`, `UName`, `TBrand`, `TWheels`, `TEngine`, `TStorage`) VALUES
-(2, 'asad', 'VOLVO', 4, 'NORMAL', 'SMALL'),
-(3, 'manan', 'PANTHER', 16, 'ULTRA', 'XL'),
-(4, 'nitin', 'PANTHER', 32, 'SUPER', 'LARGE'),
-(5, 'asad', 'WATSON', 8, 'MEGA', 'MEDIUM'),
-(6, 'asad', 'DHONI', 16, 'MEGA', 'LARGE'),
+(4, 'nitin', 'VOLVO', 4, 'NORMAL', 'SMALL'),
 (7, 'shiv', 'VOLVO', 4, 'NORMAL', 'SMALL'),
-(8, 'shiv', 'PANTHER', 8, 'SUPER', 'XL');
+(8, 'shiv', 'PANTHER', 8, 'SUPER', 'XL'),
+(9, 'nitin', 'VOLVO', 4, 'NORMAL', 'SMALL'),
+(10, 'nitin', 'WATSON', 32, 'SUPER', 'MEDIUM'),
+(12, 'jagan', 'VOLVO', 4, 'NORMAL', 'SMALL'),
+(13, 'jagan', 'DHONI', 16, 'MEGA', 'MEDIUM'),
+(16, 'nitin', 'VOLVO', 16, 'NORMAL', 'MEDIUM');
 
 --
 -- Indexes for dumped tables
@@ -68,7 +69,7 @@ ALTER TABLE `t4b`
 -- AUTO_INCREMENT for table `t4b`
 --
 ALTER TABLE `t4b`
-  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `ID` int(10) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

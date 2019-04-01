@@ -1,16 +1,8 @@
 <?php
 	session_start();
-	$servername = "localhost";
-	$username = "root";
-	$password = "";
-	$dbname = "formdb";
-
-	// Create connection
-	$conn = new mysqli($servername, $username, $password, $dbname);
-	// Check connection
-	if ($conn->connect_error) {
-		die("Connection failed: " . $conn->connect_error);
-	} 
+	require("showandinsert.php");
+	
+	$object= new DB_FUNCTIONS;
 	
 	$usr=$tb=$tw=$te=$ts="";
 	
@@ -20,17 +12,7 @@
 	$tw=$_POST["TWheels"];
 	$te=$_POST["TEngine"];
 	$tn=$_POST["TStorage"];
+	
+	$object->inserttruckdata($usr,$tb,$tw,$te,$tn);
 
-
-	$sql = "INSERT INTO t4b (UName, TBrand, TWheels, TEngine, TStorage)
-	VALUES ('$usr', '$tb', '$tw', '$te', '$tn')";
-
-	if ($conn->query($sql) === TRUE) {
-		header("location: index.php");
-	} else {
-		$_SESSION['tr_inserted']=false;
-		echo "Error: " . $sql . "<br>" . $conn->error;
-	}
-
-	$conn->close();
 ?>
